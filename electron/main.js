@@ -108,10 +108,10 @@ function waitForServer(port, timeoutMs = 60000) {
 
 function createWindow(url) {
   win = new BrowserWindow({
-    width: 1100,
-    height: 820,
-    minWidth: 760,
-    minHeight: 560,
+    width: 1280,
+    height: 720,
+    minWidth: 1280,
+    minHeight: 720,
     title: APP_NAME,
     backgroundColor: "#6ec6f0",
     autoHideMenuBar: true,
@@ -123,6 +123,8 @@ function createWindow(url) {
     },
   });
   win.removeMenu();
+  // Sempre abre maximizado.
+  win.maximize();
 
   // Links externos abrem no navegador padrão, nunca dentro do app.
   win.webContents.setWindowOpenHandler(({ url: target }) => {

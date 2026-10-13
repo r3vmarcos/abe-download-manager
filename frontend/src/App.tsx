@@ -1097,7 +1097,8 @@ const TIP_DOCS: Record<string, string> = {
   "falharam": "Tenta baixar de novo apenas os itens que deram erro.",
   "histórico de downloads": "Lista tudo que já foi baixado, com data e botão para abrir o arquivo.",
   "atualizar motor": "Verifica e instala a versão mais nova do yt-dlp, o componente que conversa com os sites. Reinicie o app depois.",
-  "developed by r3vmarcos": "Abre o GitHub do desenvolvedor (github.com/r3vmarcos) no navegador.",
+  "projeto": "Abre o repositório do projeto no GitHub (github.com/r3vmarcos/abe-download-manager) no navegador.",
+  "r3vmarcos": "Abre o perfil do desenvolvedor no GitHub (github.com/r3vmarcos) no navegador.",
   "diagnóstico": "Gera um arquivo de texto com versões, caminhos e os últimos erros, para descobrir por que um link falhou.",
   "preferências padrão": "Restaura as preferências para o padrão do app: dicas desligadas, salvar ao concluir e pastas para áudio e vídeo ligados; notificação, subpasta por playlist, normalizar volume e legendas desligados.",
   "dicas ao passar o mouse": "Liga ou desliga estas explicações que aparecem ao passar o mouse.",
@@ -2799,7 +2800,7 @@ export default function App() {
               </select>
             </Field>
           </div>
-          <div className="opts-oneline mt-2 flex flex-nowrap items-center justify-between gap-x-3 text-sm">
+          <div className="opts-oneline mt-2 flex flex-nowrap items-center justify-start gap-x-4 text-sm">
           <label className="flex cursor-pointer items-center gap-2 text-sm">
             <input
               type="checkbox"
@@ -2921,7 +2922,8 @@ export default function App() {
             </label>
 
           </div>
-          <div className="engine-row mt-3 flex flex-wrap items-center justify-start gap-2 border-t border-line pt-2">
+          <div className="engine-row mt-3 flex flex-nowrap items-center justify-between gap-1 border-t border-line pt-2">
+            <div className="engine-left flex items-center gap-1">
             <button
               type="button"
               data-tone="3"
@@ -2955,25 +2957,41 @@ export default function App() {
               <Icon name="bug" />
               Diagnóstico
             </button>
-            <a
-              href="https://github.com/r3vmarcos"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-tone="5"
-              className={`${btnSmall} keep-label ml-auto`}
-              aria-label="Developed by r3vmarcos"
-              title="Abrir o GitHub do desenvolvedor: github.com/r3vmarcos"
-            >
-              <img
-                src="/platforms/r3vmarcos.png"
-                alt=""
-                className="dev-avatar"
-                width={18}
-                height={18}
-                draggable={false}
-              />
-              Developed by r3vmarcos
-            </a>
+            </div>
+            <div className="dev-credit flex items-center gap-1">
+              <a
+                href="https://github.com/r3vmarcos/abe-download-manager"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tone="5"
+                className={`${btnSmall} keep-label`}
+                aria-label="Projeto"
+                title="Abrir o repositório do projeto no GitHub"
+              >
+                <Icon name="link" />
+                Projeto
+              </a>
+              <span className="dev-credit-text">Desenvolvido por</span>
+              <a
+                href="https://github.com/r3vmarcos"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-tone="1"
+                className={`${btnSmall} keep-label`}
+                aria-label="r3vmarcos"
+                title="Abrir o perfil do desenvolvedor no GitHub"
+              >
+                <img
+                  src="/platforms/r3vmarcos.png"
+                  alt=""
+                  className="dev-avatar"
+                  width={18}
+                  height={18}
+                  draggable={false}
+                />
+                r3vmarcos
+              </a>
+            </div>
           </div>
           {notice && <p className="mt-2 text-sm text-ok">{notice}</p>}
         </section>
