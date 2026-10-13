@@ -1,0 +1,33 @@
+# Dependências e builds
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+dist/
+build/
+backend/dist/
+backend/build/
+electron/dist/
+electron/ffmpeg/
+frontend/dist/
+*.log
+build.log
+
+# Dados locais e arquivos pessoais
+links.txt
+links_test.txt
+backend/downloads/
+Gemini_*.jpg
+fonts/
+
+# Fontes de uso pessoal (licença não permite redistribuir)
+frontend/public/fonts/Simpsonfont-pt.ttf
+frontend/public/fonts/RadioClassic.ttf
+frontend/public/fonts/ComicBook*.otf
+frontend/public/fonts/StarJedi.ttf
+frontend/public/fonts/licenses/
+
+# Logos de marcas (uso pessoal)
+frontend/public/themes/simpsons.svg
+frontend/public/themes/starwars.svg
